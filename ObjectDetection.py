@@ -73,14 +73,14 @@ while not rospy.is_shutdown():
 
 		if(g_range_ahead<1.0):
 			#calling the stop function at the X&Y DAC address with their Max voltages
-            stop(0x62, 5.17)
+                        stop(0x62, 5.17)
 			stop(0x63, 4.24)                        
 			#stopping the buggy for 3 seconds
 			time.sleep(3.0)
 			print ("range ahead %0.1f"%g_range_ahead)
 		else:
 			#calling the forward function at X&Y DAC's for 5 seconds 
-     		Y(0x62, 5)
+     		        Y(0x62, 5)
 			X(0x63, 5)
 			time.sleep(0.5)
 			print ("range ahead %0.1f"%g_range_ahead)
